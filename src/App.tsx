@@ -1,18 +1,13 @@
-import { useState } from "react";
 import { Excalidraw, MainMenu, WelcomeScreen } from "@excalidraw/excalidraw";
 import "@excalidraw/excalidraw/index.css";
 
 import "./App.css";
 
 function App() {
-  const [excalidrawAPI, setExcalidrawAPI] = useState(null);
-
   return (
     <div className="app-container">
       <div className="excalidraw-wrapper">
-        <Excalidraw
-          excalidrawAPI={(api) => setExcalidrawAPI(api)}
-        >
+        <Excalidraw>
           <WelcomeScreen>
             <WelcomeScreen.Hints.MenuHint />
             <WelcomeScreen.Hints.ToolbarHint />
